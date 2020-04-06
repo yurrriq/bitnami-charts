@@ -403,6 +403,10 @@ pgpool:
   ## Use Pgpool Load-Balancing
   ##
   useLoadBalancing: true
+  ## LoadBalancer on write actions behavior
+  ## one of: [off, transaction, trans_transaction, always]
+  ##
+  loadBalancingOnWrite: transaction
 
 ## LDAP parameters
 ##
