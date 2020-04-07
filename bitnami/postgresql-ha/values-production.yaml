@@ -236,6 +236,7 @@ postgresql:
   ## ref: https://github.com/bitnami/bitnami-docker-postgresql-repmgr#configuration-file
   ##
   # repmgrConfiguration: |-
+  
   ## PostgreSQL configuration
   ## Specify runtime configuration parameters as a dict, using camelCase, e.g.
   ## {"sharedBuffers": "500MB"}
@@ -243,6 +244,7 @@ postgresql:
   ## ref: https://github.com/bitnami/bitnami-docker-postgresql-repmgr#configuration-file
   ##
   # configuration:
+
   ## PostgreSQL client authentication configuration
   ## Specify content for pg_hba.conf
   ## Default: do not create pg_hba.conf
@@ -253,20 +255,24 @@ postgresql:
   #   local all all trust
   #   host all all localhost trust
   #   host mydatabase mysuser 192.168.0.0/24 md5
+
   ## ConfigMap with PostgreSQL configuration
   ## NOTE: This will override repmgrConfiguration, configuration and pgHbaConfiguration
   ##
   # configurationCM:
+
   ## PostgreSQL extended configuration
   ## As above, but _appended_ to the main configuration
   ## Alternatively, you can put your *.conf under the files/conf.d/ directory
   ## ref: https://github.com/bitnami/bitnami-docker-postgresql-repmgr#allow-settings-to-be-loaded-from-files-other-than-the-default-postgresqlconf
   ##
   # extendedConf:
+
   ## ConfigMap with PostgreSQL extended configuration
   ## NOTE: This will override extendedConf
   ##
   # extendedConfCM:
+
   ## initdb scripts
   ## Specify dictionary of scripts to be run at first boot
   ## Alternatively, you can put your scripts under the files/docker-entrypoint-initdb.d directory
@@ -275,6 +281,7 @@ postgresql:
   #   my_init_script.sh: |
   #      #!/bin/sh
   #      echo "Do something."
+
   ## ConfigMap with scripts to be run at first boot
   ## NOTE: This will override initdbScripts
   ##
@@ -396,10 +403,11 @@ pgpool:
   ## Use Pgpool Load-Balancing
   ##
   useLoadBalancing: true
+
   ## LoadBalancer on write actions behavior
   ## one of: [off, transaction, trans_transaction, always]
   ##
-  loadBalancingOnWrite: transaction
+  disableLoadBalancingOnWrite: transaction
 
 ## LDAP parameters
 ##
