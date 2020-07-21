@@ -136,3 +136,12 @@ resources:
   requests: {}
   #   cpu: 250m
   #   memory: 256Mi
+
+replicas: 1
+
+## Pod disruption budget
+## ref: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
+podDisruptionBudget:
+  enabled: false
+  # minAvailable:
+  # maxUnavailable:
